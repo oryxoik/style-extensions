@@ -10,8 +10,6 @@ namespace O.StyleExtensions
             if (!hex.StartsWith("#") && !hex.StartsWith("0x"))
                 hex = hex.Insert(0, "#");
 
-            hex = hex.Replace("0x", "#"); //in case the string is formatted 0xFFFFFF
-
             if (ColorUtility.TryParseHtmlString(hex, out var color))
                 return color;
 
