@@ -7,7 +7,7 @@ namespace O.StyleExtensions
     {
         private static Color HexToColor(string hex)
         {
-            if (!hex.StartsWith("#") && !hex.StartsWith("0x"))
+            if (!hex.StartsWith("#"))
                 hex = hex.Insert(0, "#");
 
             if (ColorUtility.TryParseHtmlString(hex, out var color))
